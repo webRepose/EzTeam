@@ -1,0 +1,345 @@
+.game {
+  position: relative;
+  button {
+    font-size: var(--font20);
+  }
+
+  &_cards {
+    position: relative;
+    padding: 20px;
+    display: grid;
+    padding-top: 80px;
+    padding-bottom: 50px;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-content: space-between !important;
+    align-content: space-around !important;
+
+    &_block {
+      background-color: var(--modal);
+      transform: skew(-4deg);
+      border-radius: 3px;
+      padding: 15px;
+      color: var(--text);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 2px 5px rgb(43, 3, 255);
+
+      &__stick {
+        width: 100%;
+        height: 3px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        background-color: var(--text);
+      }
+
+      &__second {
+        display: flex;
+
+        button {
+          color: white;
+          padding: 3px 10px;
+          font-size: var(--font16);
+          margin-left: 10px;
+        }
+
+        &_block {
+          margin-right: 20px;
+          p {
+            i {
+              margin-right: 5px;
+            }
+          }
+
+          div {
+            display: flex;
+            font-size: var(--font18);
+
+            p {
+              margin-top: 0;
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+
+      &__first {
+        display: flex;
+        align-items: center;
+        font-size: var(--font20);
+
+        div {
+          margin-left: auto;
+          margin-right: 20px;
+
+          em {
+            font-size: var(--font16);
+          }
+        }
+      }
+    }
+  }
+
+  &_filter {
+    width: calc(100% - 264px);
+    height: 60px;
+    background-color: var(--card_filter);
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    align-items: center;
+
+    &_burger {
+      display: none;
+      margin-left: 20px;
+      height: 37px;
+
+      button {
+        background-color: transparent;
+        width: 40px;
+
+        div {
+          height: 3px;
+          background-color: var(--text);
+          margin-bottom: 10px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    &_none {
+      display: none;
+      width: 50%;
+      position: absolute;
+      top: 59px;
+      height: calc(100svh - 119px);
+      z-index: 100;
+      background-color: var(--card_filter);
+    }
+
+    &_desk {
+      display: flex;
+      align-items: center;
+    }
+
+    h3 {
+      margin-left: 20px;
+    }
+
+    &_create {
+      padding: 5px 20px;
+      color: white;
+      background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+      transform: skew(-5deg);
+      margin-left: auto;
+      margin-right: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 2px 20px rgba(43, 3, 543);
+    }
+
+    &_country {
+      cursor: pointer;
+      outline: none;
+      border: 0;
+      padding: 5px 10px;
+      color: white;
+      background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+      transform: skew(-5deg);
+      margin-left: 20px;
+      border-radius: 2px;
+      font-size: var(--font20);
+
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 2px 20px rgba(43, 3, 543);
+
+      option {
+        background-color: var(--modal);
+      }
+    }
+  }
+
+  &_create {
+    align-items: center;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    display: flex;
+    height: calc(100% - 120px);
+    justify-content: center;
+    position: fixed;
+    width: calc(100% - 264px);
+    z-index: 100;
+
+    &_block {
+      width: 560px;
+      height: fit-content;
+      background-color: var(--modal);
+      transform: skew(-3deg);
+      border-radius: 3px;
+      padding: 20px;
+
+      &_two {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+        color: white;
+        padding: 6px 20px;
+        background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+      }
+    }
+
+    &_block_flex {
+      i {
+        margin-right: 10px;
+      }
+
+      &_input {
+        display: flex;
+        background-color: var(--create_card);
+        padding: 5px;
+        margin-bottom: 10px;
+        width: fit-content;
+
+        img {
+          margin-right: 10px;
+        }
+
+        input {
+          outline: none;
+          font-size: var(--font16);
+          background-color: transparent;
+          border: 0;
+          color: var(--text);
+
+          margin-left: 10px;
+
+          &::placeholder {
+            color: var(--text);
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+
+    h3 {
+      color: var(--text);
+    }
+
+    label {
+      font-size: var(--font18);
+      margin-bottom: 10px;
+      margin-right: 20px;
+      color: var(--text);
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    select {
+      cursor: pointer;
+      outline: none;
+      border: 0;
+      padding: 5px 20px;
+      color: var(--text);
+      background-color: var(--create_card);
+      border-radius: 2px;
+      font-size: var(--font16);
+      margin-bottom: 10px;
+      margin-top: 5px;
+      width: 100%;
+    }
+
+    h3 {
+      margin: 5px 0 15px 0;
+      text-align: center;
+    }
+  }
+}
+
+.empty {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 85svh;
+  justify-content: center;
+
+  &_block {
+    width: 350px;
+    padding: 20px;
+    height: fit-content;
+    color: white;
+    border-radius: 2px;
+    transform: skew(-5deg);
+    background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+
+    h3 {
+      text-align: center;
+    }
+
+    button {
+      background-color: rgb(33 33 33 / 1);
+      color: white;
+      padding: 5px 20px;
+      display: block;
+      margin: 0 auto;
+      margin-top: 20px;
+      font-size: var(--font18);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .game_filter {
+    width: 100%;
+  }
+  aside {
+    display: none;
+  }
+  .game {
+    &_create {
+      width: 100%;
+    }
+  }
+  main {
+    display: block;
+  }
+}
+
+@media (max-width: 900px) {
+  .game {
+    &_create {
+      &_block_flex {
+        &_input {
+          width: 100%;
+        }
+      }
+      &_block {
+        width: fit-content;
+        &_two {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .game_filter {
+    &_desk {
+      display: none;
+    }
+    &_burger {
+      display: flex;
+    }
+    &_none {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.profile {
+  color: var(--text);
+}
+.profile h3 {
+  text-align: center;
+  color: var(--text);
+}
+.profile_delete {
+  background-color: transparent;
+  display: block;
+  margin-left: auto;
+  color: var(--text);
+  font-size: var(--font18);
+}/*# sourceMappingURL=profile.module.css.map */

@@ -1,0 +1,19 @@
+.navigation {
+  display: flex;
+  width: 100%;
+  padding: 20px 10px;
+  color: aliceblue;
+  align-items: center;
+  font-size: 22px;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+.navigation__id {
+  margin: 0 10px 0 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .navigation {
+    width: 99.9svw;
+  }
+}/*# sourceMappingURL=MenuList.module.css.map */

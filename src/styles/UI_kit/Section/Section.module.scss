@@ -1,0 +1,12 @@
+.section {
+  width: 100%;
+  padding-top: 60px;
+  margin-left: auto;
+  width: calc(100% - 264px);
+}
+
+@media only screen and (max-width: 768px) {
+  .section {
+    width: 100%;
+  }
+}

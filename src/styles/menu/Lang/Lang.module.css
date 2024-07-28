@@ -1,0 +1,28 @@
+.lang {
+  display: flex;
+  width: 100%;
+  padding: 6px 20px;
+  background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  color: white;
+  transform: skew(-5deg);
+  border: 0;
+}
+.lang i {
+  margin-right: 10px;
+}
+.lang p {
+  font-size: var(--font18);
+}
+
+.outLang {
+  margin-right: 15px;
+}
+
+@media (max-width: 512px) {
+  .lang i {
+    margin-right: 0;
+  }
+  .lang p b {
+    display: none;
+  }
+}/*# sourceMappingURL=Lang.module.css.map */

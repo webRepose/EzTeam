@@ -1,17 +1,40 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { createContext } from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./styles/index/index.module.css";
+import "./styles/adapt/adapt.css";
+import { initializeApp } from "firebase/app";
+import { getStorage } from "firebase/storage";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const firebaseConfig = {
+  apiKey: "AIzaSyCycT9-9J5zwRqSlEs6A6b-jynFBBngHHs",
+  authDomain: "findteam-bd4cd.firebaseapp.com",
+  projectId: "findteam-bd4cd",
+  storageBucket: "findteam-bd4cd.appspot.com",
+  messagingSenderId: "133627150206",
+  appId: "1:133627150206:web:3ba21ac31f14adde27fd2f",
+};
+
+const Context = createContext(null);
+export default Context;
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+export const firestore = getStorage(app);
+export const db = getFirestore(app);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <Context.Provider
+      value={{
+        firebaseConfig,
+        auth,
+        firestore,
+      }}
+    >
+      <App />
+    </Context.Provider>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

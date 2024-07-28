@@ -1,0 +1,45 @@
+.login {
+  align-items: center;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  color: var(--text);
+  z-index: 100;
+}
+.login_block {
+  background-color: var(--modal);
+  transform: skew(-5deg);
+  width: 400px;
+}
+.login h1 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.login button {
+  padding: 10px 50px;
+  background-color: #473d45;
+  border: 0;
+  color: white;
+  transform: skew(-5deg);
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+  font-size: var(--font18);
+}
+.login button img {
+  margin-right: 10px;
+  position: relative;
+  top: 2px;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}/*# sourceMappingURL=login.module.css.map */

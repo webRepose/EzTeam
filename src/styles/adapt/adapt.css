@@ -1,0 +1,17 @@
+html.dark {
+  --main_bg: #2b2d35;
+  --body_bg: #1e1e22;
+  --modal: rgb(33 33 33 / 1);
+  --text: white;
+  --card_filter: #28292c;
+  --create_card: #28292c;
+}
+
+html.light {
+  --main_bg: #bfc2c6;
+  --body_bg: #ebf1f1;
+  --modal: white;
+  --text: rgb(33 33 33 / 1);
+  --card_filter: #bbbbbb;
+  --create_card: #dad5d5;
+}
